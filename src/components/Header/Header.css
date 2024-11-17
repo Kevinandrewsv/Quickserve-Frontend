@@ -1,0 +1,112 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px; /* Add rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    gap: 1.5vw;
+    max-width: 50%; /* Set max width for the text block */
+    bottom: 10%;
+    left: 5vw; /* Align text to the left with some margin */
+    animation: fadeIn 3s;
+    color: white;
+    padding: 0 2vw; /* Add padding for better spacing */
+}
+
+.header-contents h2 {
+    font-weight: 600;
+    color: white;
+    font-size: max(4.5vw, 22px);
+    line-height: 1.2;
+    margin-bottom: 5vw;
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+.header-contents p {
+    color: white;
+    font-size: max(1vw, 13px);
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    text-align: left; /* Align paragraph text to the left */
+}
+
+.header-contents button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1.2vw 2.5vw;
+    background: white;
+    font-size: max(1.1vw, 14px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    text-align: center; /* Center the button text */
+}
+
+.header-contents button:hover {
+    background-color: #f1c40f; /* Add a vibrant hover effect */
+    color: white;
+    transform: scale(1.05); /* Slightly enlarge the button for emphasis */
+}
+
+@media (max-width: 1050px) {
+    .header {
+        height: 38vw;
+    }
+    .header-contents {
+        max-width: 70%; /* Increase width for medium screens */
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        height: 45vw; /* Increase height for smaller screens */
+    }
+
+    .header-contents {
+        max-width: 90%; /* Allow more width for text */
+        bottom: 15%; /* Lower the content slightly for mobile */
+        left: 0; /* Align content to the extreme left */
+        padding: 0 5vw; /* Maintain some padding for readability */
+        gap: 2vw; /* Increase gap for better spacing */
+    }
+
+    .header-contents h2 {
+        font-size: max(5vw, 18px); /* Increase font size for mobile */
+        margin-bottom: 9vw; /* Increase space between the title and description */
+        text-align: start; /* Ensure title is aligned to the left */
+        margin-left: 0vw; /* No additional offset */
+        margin-right: 20vw;
+        color: #ffffff;
+        
+    }
+
+    .header-contents p {
+        font-size: max(3vw, 12px); /* Adjust paragraph size for readability */
+        text-align: left; /* Ensure text alignment to the left */
+        display: block; /* Ensure the text is displayed */
+        
+    }
+
+    .header-contents button {
+        padding: 4vw 8vw; /* Make the button larger on small screens */
+        font-size: max(4vw, 16px); /* Adjust button font size for mobile */
+        text-align: center; /* Ensure button text remains centered */
+    }
+
+    .header-contents button:hover {
+        background-color: #f1c40f; /* Same vibrant hover effect */
+        color: white;
+        transform: scale(1.05);
+    }
+}

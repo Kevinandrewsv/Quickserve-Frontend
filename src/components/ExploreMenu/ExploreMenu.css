@@ -1,0 +1,184 @@
+/* Explore Menu Container */
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px; /* Reduced padding for smaller screens */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Header */
+.explore-menu h1 {
+    color: #262626;
+    font-weight: 600;
+    font-size: 22px; /* Slightly smaller for all screens */
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Text Block */
+.explore-menu-text {
+    max-width: 90%; /* Expand text width for better readability */
+    margin: 0 auto 15px; /* Consistent spacing below */
+    color: #808080;
+    font-size: 14px; /* Adjusted for smaller devices */
+    line-height: 1.6;
+    text-align: justify; /* Improved text alignment */
+}
+
+/* List Container with Scrollbar */
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between; /* Adjust alignment dynamically */
+    align-items: center;
+    gap: 15px; /* Adjusted gap */
+    margin: 0 auto;
+    padding: 10px 5px;
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: thin; /* For modern browsers, makes scrollbar thinner */
+    scrollbar-color: #cccccc #f9f9f9; /* Custom scrollbar colors */
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+.explore-menu-list::-webkit-scrollbar {
+    height: 6px; /* Scrollbar height */
+}
+
+.explore-menu-list::-webkit-scrollbar-thumb {
+    background: #cccccc; /* Scrollbar thumb color */
+    border-radius: 10px;
+}
+
+.explore-menu-list::-webkit-scrollbar-thumb:hover {
+    background: #999999; /* Scrollbar thumb hover color */
+}
+
+.explore-menu-list::-webkit-scrollbar-track {
+    background: #f9f9f9; /* Scrollbar track color */
+}
+
+/* Individual Items */
+.explore-menu-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 5px; /* Reduced padding */
+    gap: 5px; /* Add small gap between image and text */
+}
+
+/* Images */
+.explore-menu-list-item img {
+    width: 15vw; /* Responsive width */
+    min-width: 70px; /* Ensure consistent minimum size */
+    max-width: 100px; /* Prevent overly large images */
+    border-radius: 50%; /* Circular images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.explore-menu-list-item img:hover {
+    transform: scale(1.1); /* Subtle hover effect */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), 0 0 10px 3px #ebc334; /* Glow effect */
+    border: 2px solid #ebc334; /* Add a yellow border */
+}
+
+/* Remove hover effects on small screens */
+@media (max-width: 480px) {
+    .explore-menu-list-item img:hover {
+        transform: none; /* Disable scaling */
+        box-shadow: none; /* Remove glow effect */
+        border: none; /* Remove border */
+    }
+}
+
+/* Item Text */
+.explore-menu-list-item p {
+    margin: 0.5vw;
+    color: #1c1a1a;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Divider Line */
+.explore-menu hr {
+    margin: 20px 0;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+/* Media Query: Tablets */
+@media (max-width: 768px) {
+    .explore-menu {
+        padding: 20px; /* Reduced padding */
+        gap: 15px; /* Adjusted spacing */
+    }
+
+    .explore-menu-text {
+        font-size: 13px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .explore-menu-list {
+        gap: 10px; /* Reduced gap */
+    }
+
+    .explore-menu-list-item img {
+        width: 18vw;
+        min-width: 60px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 13px; /* Adjusted text size */
+    }
+}
+
+/* Media Query: Small Screens */
+@media (max-width: 480px) {
+    .explore-menu h1 {
+        font-size: 18px; /* Reduced heading size */
+    }
+
+    .explore-menu-text {
+        font-size: 12px;
+        padding: 0 10px; /* Add side padding */
+    }
+
+    .explore-menu-list {
+        gap: 8px; /* Further reduced gap */
+        padding: 0 10px;
+    }
+
+    .explore-menu-list-item img {
+        width: 20vw; /* Larger width for better visibility */
+    }
+}
+
+/* Media Query: Very Small Screens */
+@media (max-width: 360px) {
+    .explore-menu {
+        padding: 15px; /* Even tighter padding */
+    }
+
+    .explore-menu-text {
+        font-size: 11px; /* Smaller font size */
+        line-height: 1.4; /* Adjusted line height */
+    }
+
+    .explore-menu-list-item img {
+        width: 25vw; /* Slightly larger images */
+    }
+
+    .explore-menu-list-item p {
+        font-size: 11px; /* Smaller text */
+    }
+}
